@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Login Page</title>
+  <style>
+    /* CSS styles here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+    <img src="./assets/img/vemulogo (1).png" alt="logo">
+  </h1>
+    <h1>Vemu Institute of Technology</h1>
+    <form>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="submit" value="Login" onclick="validateLogin(event)">
+    </form>
+  </div>
+
+  <script>
+    function validateLogin(event) {
+      event.preventDefault(); // Prevent the form from submitting
+      
+      // Get the values of username and password fields
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Perform validation or send the data to the server for authentication
+      // In this example, we are checking if the username is "admin" and the password is "password"
+      if (username == "214M1A3146") {
+        if (password == "@Nani2004"){
+        window.location.href = "img.html"; // Redirect to the next page
+      }
+      else{
+        window.alert("Invalid password");
+      }
+    } else {
+        window.alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>

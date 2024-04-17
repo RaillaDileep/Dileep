@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cards Page</title>
+<style>
+    body {
+        background-image: url(./assets/img/vemulogo\ \(1\).png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+      }
+      
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 80%;
+        max-width: 1000px;
+      }
+      
+      .box {
+        width: calc(25% - 20px);
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .box h2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      
+      .box a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #333;
+        border-radius: 5px;
+      }
+      
+      .box:hover {
+        transform: scale(1.05);
+      }
+      
+      .blue {
+        background-color: #3498db;
+      }
+      
+      .green {
+        background-color: #2ecc71;
+      }
+      
+      .orange {
+        background-color: #f1c40f;
+      }
+      
+      .purple {
+        background-color: #9b59b6;
+      }
+      
+  </style>
+</head>
+<body>
+    <section class="container">
+      <div class="box" data-color="blue">
+        <h2>class 1</h2>
+        <p></p>
+      </div>
+      <div class="box" data-color="green">
+        <h2>class 2</h2>
+        <p></p>
+      </div>
+      <div class="box" data-color="purple">
+        <h2>class 3</h2>
+        <p></p>
+      </div>
+      <div class="box" data-color="orange">
+        <h2>class 4</h2>
+        <p></p>
+      </div>
+    </section>
+    <script >
+      const boxes = document.querySelectorAll('.box');
+  
+  boxes.forEach(box => {
+    const color = box.dataset.color;
+    box.classList.add(color);
+  });
+  
+    </script>
+  </body>
+</html>
+
